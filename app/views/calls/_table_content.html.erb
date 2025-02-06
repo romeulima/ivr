@@ -1,0 +1,12 @@
+<tr id="call_<%= call.id %>">
+    <td class="p-3 whitespace-nowrap text-sm font-medium text-zinc-300 text-zinc-200"> <%= call.id %> </td>
+    <td class="p-3 whitespace-nowrap text-sm text-zinc-300 text-zinc-200"><%= call.duration.to_i == 0 ? "-" : call.duration.concat("s") %></td>
+    <td id="status" class="p-3 whitespace-nowrap text-sm text-zinc-300 text-zinc-200"><%= call&.status || "-" %></td>
+    <td class="whitespace-nowrap text-sm font-medium">
+        <% unless call.url.blank? %>
+            <%= link_to "Link", call.url, class: "inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 focus:outline-none focus:text-blue-400" %>
+        <% else %>
+            <span>-</span>
+        <% end %>
+    </td>
+</tr>
