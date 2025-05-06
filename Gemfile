@@ -64,6 +64,6 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "twilio-ruby", "~> 7.4"
+gem "twilio-ruby", "~> 7.6"
 
 gem "faraday", "~> 2.12"
